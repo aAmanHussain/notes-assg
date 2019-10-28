@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --text-color: #ffffff;
+  --primary-color: #6200ee;
+  --secondary-color: #3700b3;
+  --tertiary-color: #bb86fc;
+}
+
+ul {
+  list-style: none;
+}

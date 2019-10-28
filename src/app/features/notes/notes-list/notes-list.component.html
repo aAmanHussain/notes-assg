@@ -1,0 +1,30 @@
+<ul>
+  <li *ngFor="let note of notesList; let i = index;" (click)="openNote(i)">
+    <h4>{{note.title}}</h4>
+    <p appExcerpt >{{note.content}}</p>
+  </li>
+
+  <li *ngIf="notesList.length === 0">
+    <h4>No Notes Available</h4>
+  </li>
+</ul>
+
+
+<!-- <div class="form">
+  <ul>
+    <li class="form-group" *ngIf="showForm">
+      <div>
+        <label for="title">
+          Title: <input type="text" #noteTitle />
+        </label>
+        <br />
+        <label for="content">
+          Content: <input type="text" #noteContent />
+        </label>
+        <br />
+        <input type="button" (click)="addNote(noteTitle.value, noteContent.value);noteTitle.value = '';noteContent.value = '';" value="ADD NOTE" />
+      </div>
+    </li>
+    <li *ngIf="notesList" (click)="showForm = true">+ New Note</li>
+  </ul>
+</div> -->

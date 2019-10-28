@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <header class="clearfix">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-heading">Notes Application</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 offset-2">
+        <nav>
+          <app-navbar (emitSidebarStatus)="handleHideSidebar($event)" [sidebarStatus]="showSidebar"></app-navbar>
+        </nav>
+      </div>
+    </div>
+  </header>
+	<div class="wrapper clearfix">
+		<div class="wrapper">
+			<aside [ngClass]="{'negative-margin': !showSidebar}">
+				<app-folders></app-folders>
+			</aside>
+
+			<main [ngClass]="{'full-width': !showSidebar }">
+				<div [ngClass]="{'full-width': !showSidebar, 'wrapper': showSidebar}">
+					<div class="aside">
+						<app-notes-list></app-notes-list>
+					</div>
+					<div class="main">
+						<app-note-details></app-note-details>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>

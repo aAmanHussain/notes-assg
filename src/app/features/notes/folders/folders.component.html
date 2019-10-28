@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let folder of folderList | sort; let i = index" (click)="openNotesList(i)">
+    <i class="fa fa-folder" aria-hidden="true"></i> {{folder | titlecase }}
+  </li>
+</ul>
+<div class="form">
+  <ul>
+    <li class="form-group" *ngIf="showForm">
+      <input type="text" #folderName class="form-control" (keyup.enter)="addFolder(folderName.value); folderName.value = ''" placeholder="Enter Folder Name" />
+    </li>
+    <li (click)="showForm = true">+ New Folder</li>
+  </ul>
+</div>

@@ -1,0 +1,7 @@
+li.list-item {
+    padding: 0px 30px 0px 0px;
+}
+
+li.list-item > a {
+    cursor: pointer;
+}

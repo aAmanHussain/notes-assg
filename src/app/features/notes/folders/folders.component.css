@@ -1,0 +1,11 @@
+ul > li {
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.form ul > li:last-child {
+    position: absolute;
+    bottom: 10px;
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
